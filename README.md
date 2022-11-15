@@ -1,10 +1,10 @@
 # devkitnix
 
-Collection of devkitpro toolchains compatible with Nix.
-To install toolchain, use following:
+Collection of devkitPro toolchains using Nix.
+To install a toolchain, use following:
 
 ```
-git clone https://github.com/knarkzel/devkitnix
+git clone https://github.com/zig-homebrew/devkitnix
 cd devkitnix
 nix-build <toolchain>.nix
 ```
@@ -23,6 +23,6 @@ nix-build <toolchain>.nix
 - Wii
 - Wii U
 
-# devkitA64
+## devkitA64
 
 - Nintendo Switch
