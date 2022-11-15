@@ -1,17 +1,17 @@
 {
+  pkgs,
   image,
   directory,
-  pkgs ? import <nixpkgs> {},
 }:
 pkgs.vmTools.runInLinuxVM (
   pkgs.runCommand "docker-preload-image" {
     memSize = 8 * 1024;
-    buildInputs = with pkgs; [
-      curl
-      kmod
-      docker
-      e2fsprogs
-      utillinux
+    buildInputs = [
+      pkgs.curl
+      pkgs.kmod
+      pkgs.docker
+      pkgs.e2fsprogs
+      pkgs.utillinux
     ];
   }
   ''
