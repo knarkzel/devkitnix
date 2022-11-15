@@ -1,4 +1,4 @@
-{ pkgs ? import <nixpkgs> {} }:
+{pkgs ? import <nixpkgs> {}}:
 with pkgs; rec {
   devkitppc-img = dockerTools.pullImage {
     imageName = "devkitpro/devkitppc";
