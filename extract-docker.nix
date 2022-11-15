@@ -1,8 +1,4 @@
-{
-  pkgs,
-  image,
-  directory,
-}:
+pkgs: image: directory:
 pkgs.vmTools.runInLinuxVM (
   pkgs.runCommand "docker-preload-image" {
     memSize = 8 * 1024;
