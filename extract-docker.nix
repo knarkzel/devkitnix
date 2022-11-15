@@ -1,7 +1,10 @@
-pkgs: image: directory:
+pkgs: image:
+let
+  directory = "/opt/devkitpro";
+in
 pkgs.vmTools.runInLinuxVM (
   pkgs.runCommand "docker-preload-image" {
-    memSize = 8 * 1024;
+    memSize = 12 * 1024;
     buildInputs = [
       pkgs.curl
       pkgs.kmod

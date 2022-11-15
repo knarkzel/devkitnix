@@ -10,10 +10,8 @@ let
 in {
   devkitppc = pkgs.stdenv.mkDerivation {
     name = "devkitppc";
-    src = import ./extract-docker.nix pkgs image "/opt/devkitpro";
-    nativeBuildInputs = [
-      pkgs.autoPatchelfHook
-    ];
+    src = import ./extract-docker.nix pkgs image;
+    nativeBuildInputs = [ pkgs.autoPatchelfHook ];
     buildInputs = [
       pkgs.stdenv.cc.cc
       pkgs.ncurses5
@@ -23,7 +21,7 @@ in {
     buildPhase = "true";
     installPhase = ''
       mkdir -p $out
-      cp -r $src/{devkitPPC,libogc,examples,portlibs,tools,wut} $out
+      cp -r $src/{devkitPPC,libogc,portlibs,tools} $out
       rm -rf $out/pacman
     '';
   };
