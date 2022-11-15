@@ -8,8 +8,8 @@ let
     finalImageTag = "20220821";
   };
 in {
-  devkitppc = pkgs.stdenv.mkDerivation {
-    name = "devkitppc";
+  devkitPPC = pkgs.stdenv.mkDerivation {
+    name = "devkitPPC";
     src = import ./extract-docker.nix pkgs image;
     nativeBuildInputs = [ pkgs.autoPatchelfHook ];
     buildInputs = [
@@ -21,7 +21,7 @@ in {
     buildPhase = "true";
     installPhase = ''
       mkdir -p $out
-      cp -r $src/{devkitPPC,libogc,portlibs,tools} $out
+      cp -r $src/{devkitPPC,libogc,portlibs,tools,wut} $out
       rm -rf $out/pacman
     '';
   };

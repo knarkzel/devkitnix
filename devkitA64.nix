@@ -8,8 +8,8 @@ let
     finalImageTag = "20221113";
   };
 in {
-  devkita64 = pkgs.stdenv.mkDerivation {
-    name = "devkita64";
+  devkitA64 = pkgs.stdenv.mkDerivation {
+    name = "devkitA64";
     src = import ./extract-docker.nix pkgs image;
     nativeBuildInputs = [ pkgs.autoPatchelfHook ];
     buildInputs = [
