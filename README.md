@@ -1,4 +1,10 @@
 # devkitnix
 
-Collection of Nix-compatible build scripts for devkitpro. To install toolchain,
-use following:
+Collection of devkitpro toolchains compatible with Nix.
+To install toolchain, use following:
+
+```
+git clone https://github.com/knarkzel/devkitnix
+cd devkitnix
+nix-build <toolchain>.nix
+```

@@ -8,8 +8,8 @@ let
     finalImageTag = "20200704";
   };
 in {
-  devkitpro = pkgs.stdenv.mkDerivation {
-    name = "devkitpro";
+  devkitppc = pkgs.stdenv.mkDerivation {
+    name = "devkitppc";
     src = import ./extract-docker.nix {
       pkgs = pkgs;
       image = devkitppc-img;
