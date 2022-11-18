@@ -13,3 +13,5 @@ $ nix build github:knarkzel/devkitnix#devkitPPC
 $ ls result
 devkitPPC  libogc  portlibs  tools  wut
 ```
+
+For example usage of `devkitnix`, see the [switch example](https://github.com/knarkzel/switch).
