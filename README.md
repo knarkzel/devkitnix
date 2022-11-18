@@ -1,28 +1,18 @@
 # devkitnix
 
-Collection of devkitPro toolchains using Nix.
-To install a toolchain, use following:
+Collection of devkitPro packages for Nix using flakes.
+To build a toolchain like devkitPPC, use following:
 
 ```
-git clone https://github.com/zig-homebrew/devkitnix
-cd devkitnix
-nix-build <toolchain>.nix
+nix build github:zig-homebrew/devkitnix#devkitPPC
 ```
 
-## devkitARM
+## Toolchains
 
-- Game Boy Advance
-- Nintendo DS
-- Nintendo 3DS
-- GP32
-- GP2X
-
-## devkitPPC
-
-- GameCube
-- Wii
-- Wii U
-
-## devkitA64
-
-- Nintendo Switch
+```
+└───packages
+    └───x86_64-linux
+        ├───devkitA64: package 'devkitA64'
+        ├───devkitARM: package 'devkitARM'
+        └───devkitPPC: package 'devkitPPC'
+```
